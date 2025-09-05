@@ -1,0 +1,20 @@
+site_name: FaaSr Documentation
+site_url: https://faasr.github.io/FaaSr-Docs
+theme:
+  name: material
+nav:
+  - 'Home': 'index.md'
+  - 'Tutorial': 'tutorial.md'
+  - 'Configuring compute servers': 'compute_servers.md'
+  - 'Configuring data servers': 'data_servers.md'
+  - 'Configuring workflow repo': 'workflow_repo.md'
+  - 'Creating functions': 'functions.md'
+  - 'R APIs': 'r_api.md'
+  - 'Python APIs': 'py_api.md'
+  - 'Creating workflows': 'workflows.md'
+  - 'Registering workflows': 'register_workflow.md'
+  - 'Invoking workflows': 'invoke_workflow.md'
+  - 'Workflow WebUI': 'webui.md'
+  - 'Logs': 'logs.md'
+  - 'Default values': 'defaults.md'
+  
