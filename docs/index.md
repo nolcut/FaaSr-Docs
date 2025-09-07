@@ -48,25 +48,27 @@ To get started with FaaSr you need:
 - A workflow configuration JSON file stored in your account's FaaSr-workflow repository
 - A function code repository
 
-The [FaaSr tutorial] guides you through setting up your ]workflow repo] using a freely available public S3 test bucket hosted by __[Minio Play]__. Once you are comfortable with the initial setup from the tutorial, you will be able to:
+## Getting started 
+
+It's often easier to learn by doing: read the [workflow model] introduction for a brief overview of how FaaSr workflows are composed, and then the [FaaSr tutorial] guides you through setting up your ]workflow repo] using a freely available public S3 test bucket hosted by __[Minio Play]__. Once you are comfortable with the initial setup from the tutorial, you will be able to:
 
 - Configure additional [cloud compute] and [data storage] accounts
 - Create your own [functions] using [FaaSr R APIs] and/or [FaaSr Python APIs]
-- Configure your own workflows using the [FaaSr WebUI] that produces FaaSr-compliant JSON configurations
+- Configure your own workflows using the [FaaSr Workflow Builder Web UI] that produces FaaSr-compliant JSON configurations
 - [Register] your own workflows with one or more cloud providers
 - [Invoke] your workflows
 - Verify and debug your workflow [logs]
 
-
+[workflow model]: prog_model.md
 [FaaSr tutorial]: tutorial.md
-[cloud compute]: compute_servers.md
-[data storage]: data_servers.md
+[cloud compute]: workflows.md
+[data storage]: workflows.md
 [workflow repo]: workflow_repo.md
 [functions]: functions.md
 [FaaSr R APIs]: r_api.md
 [FaaSr Python APIs]: py_api.md
 [workflows]: workflows.md
-[FaaSr WebUI]: webui.md
+[FaaSr Workflow Builder Web UI]: workflows.md
 [Register]: register_workflow.md
 [Invoke]: invoke_workflow.md
 [logs]: logs.md
