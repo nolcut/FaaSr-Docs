@@ -2,21 +2,28 @@ site_name: FaaSr Documentation
 site_url: https://faasr.github.io/FaaSr-Docs
 theme:
   name: material
+  logo: assets/faasr_logo.jpg
+  features:
+    - navigation.tabs
 nav:
   - 'Home': 'index.md'
-  - 'FaaSr workflow model': 'prog_model.md'
   - 'Tutorial': 'tutorial.md'
-  - 'Creating functions': 'functions.md'
-  - 'Setting up FaaSr-workflow repo': 'workflow_repo.md'
-  - 'Creating and editing workflows': 'workflows.md'
-  - 'Registering workflows': 'register_workflow.md'
-  - 'Invoking workflows': 'invoke_workflow.md'
-  - 'Retrieving logs': 'logs.md'
-  - 'Concurrent invocation': 'rank.md'
-  - 'Conditional invocation': 'conditional.md'
-  - 'Invocation IDs': 'invocationid.md'
-  - 'R API reference': 'r_api.md'
-  - 'Python API reference': 'py_api.md'
-  - 'Default values': 'defaults.md'
-  - 'Advanced usage': 'advanced.md'
+  - 'Documentation':
+    - 'FaaSr workflow model': 'prog_model.md'
+    - 'Creating functions': 'functions.md'
+    - 'Setting up FaaSr-workflow repo': 'workflow_repo.md'
+    - 'Creating and editing workflows': 'workflows.md'
+    - 'Registering workflows': 'register_workflow.md'
+    - 'Invoking workflows': 'invoke_workflow.md'
+    - 'Retrieving logs': 'logs.md'
+    - 'Concurrent invocation': 'rank.md'
+    - 'Conditional invocation': 'conditional.md'
+    - 'Invocation IDs': 'invocationid.md'
+    - 'R API reference': 'r_api.md'
+    - 'Python API reference': 'py_api.md'
+    - 'Default values': 'defaults.md'
+    - 'Advanced usage': 'advanced.md'
+  - 'About': 'about.md'
+  - 'Community': 'community.md'
+  - 'Contact': 'contact.md'
   
