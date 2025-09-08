@@ -44,8 +44,8 @@ FaaSr supports workflows with functions written in Python, R, or a combination o
 
 To get started with FaaSr you need:
 
-- A GitHub account and associated PAT token
-- An S3 bucket and associated access and secret keys
+- A GitHub account and associated [credentials] (a PAT token)
+- An S3 bucket and associated [credentials] (access and secret keys)
 - A FaaSr-workflow GitHub repository in your account
 - A workflow configuration JSON file stored in your account's FaaSr-workflow repository
 - A function code repository
@@ -65,6 +65,7 @@ It's often easier to learn by doing: read the [workflow model] introduction for 
 [FaaSr tutorial]: tutorial.md
 [cloud compute]: workflows.md
 [data storage]: workflows.md
+[credentials]: credentials.md
 [workflow repo]: workflow_repo.md
 [functions]: functions.md
 [FaaSr R APIs]: r_api.md

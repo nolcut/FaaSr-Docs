@@ -1,4 +1,4 @@
-site_name: FaaSr Documentation
+site_name: FaaSr - Serverless workflows made easy
 site_url: https://faasr.github.io/FaaSr-Docs
 theme:
   name: material
@@ -21,6 +21,7 @@ nav:
     - 'Invocation IDs': 'invocationid.md'
     - 'R API reference': 'r_api.md'
     - 'Python API reference': 'py_api.md'
+    - 'Creating cloud credentials': 'credentials.md'
     - 'Default values': 'defaults.md'
     - 'Advanced usage': 'advanced.md'
   - 'About': 'about.md'

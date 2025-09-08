@@ -1,0 +1,54 @@
+# Creating cloud credentials
+
+
+## S3 data server
+
+- In general, the credentials you need from your S3 account are the `ACCESS_KEY` and the `SECRET_KEY`. These are akin to user names and passwords. 
+- How you obtain these credentials will depend on your provider (e.g. AWS S3, MINIO, OSN - see below)
+- Paste the access key and the secret key as _Repository secrets_ in your _FaaSr-workflow_ as per the instructions in the [workflow repo] documentation
+
+## GitHub Actions
+
+If you don't already have one, you need to generate a GitHub Personal Access Token (PAT) to configure FaaSr.
+[Details on how to create a PAT are available here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)
+
+In summary:
+- In the upper-right corner of any page, click your profile photo, then click Settings.
+- In the left sidebar, click Developer settings.
+- In the left sidebar, click Personal access tokens.
+- Click Generate new token.
+- In the "Note" field, give your token a descriptive name.
+- In scopes, select “workflow” and “read:org” (under admin:org)
+- Copy the token; you may save it in your local computer's password manager as well
+- Paste the token under the name `GH_PAT` as a _Repository secret_ in your _FaaSr-workflow_ as per the instructions in the [workflow repo] documentation
+
+## AWS Lambda
+
+- You need an access key and secret key to use Lambda in FaaSr.
+- You can download your access and secret keys from your [Amazon AWS console](https://console.aws.amazon.com/console/home).
+- Paste the access key and the secret key under the names `AWS_AccessKey` and `AWS_SecretKey`, respectively, as _Repository secrets_ in your _FaaSr-workflow_ as per the instructions in the [workflow repo] documentation
+
+## OpenWHisk
+
+- You need an API key from your provider to configure for use in FaaSr
+- How you obtain this will depend on your cloud provider.
+- Paste the API key under the name `OW_API.key` as a _Repository secret_ in your _FaaSr-workflow_ as per the instructions in the [workflow repo] documentation
+
+
+## Google Cloud
+
+TBD
+
+## Slurm
+
+TBD
+
+## Academic cloud providers
+
+### Open Storage Network
+
+- For researchers in the US, you can [request an allocation](https://www.openstoragenetwork.org/get-involved/get-an-allocation/) of 10+ TB S3 storage.
+- If your request is approved, you will be assigned one S3 bucket, and can then copy the access and secret keys provided to you for use with FaaSr
+
+
+[workflow repo]: workflow_repo.md
