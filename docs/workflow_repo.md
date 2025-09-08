@@ -30,12 +30,13 @@ Before you can register and invoke workflows, you need to create secrets storing
 
 ## Naming convention for secrets
 
-### S3 servers
+### S3 data store servers
 
 - When creating a workflow with the [FaaSr Workflow Builder Web UI], you are asked to enter a name for your S3 data server(s)
-- Assume the name of a data server you are setting the secrets for is `EXAMPLE`, you need two secrets, named exactly as follows (replace `EXAMPLE` with the name of the server you configured)
-- `EXAMPLE_ACCESS_KEY`
-- `EXAMPLE_SECRET_KEY`
+- The default compute server name for an S3 server is `S3`
+- Assume the name of a data server you are setting the secrets for is `S3`, you need two secrets, named exactly as follows (replace `S3` with the name of the server you configured)
+- `S3_ACCESS_KEY`
+- `S3_SECRET_KEY`
 - The secrets you store under these names are the access and secret keys you obtained from your S3 provider
 
 ### GitHub Actions

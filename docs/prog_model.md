@@ -5,7 +5,7 @@ The FaaSr model for programming, configuring, and deploying workflows is as foll
 - **FaaSr Workflow DAG**: describes the order in which your functions execute. Valid workflows must be _Directed Acyclic Graphs (DAG)_ (i.e. no loops) with a _single invocation entry_, and are described as a _JSON file_
 - **Action**: each node in the DAG is an _Action_ that represents the execution of a _user function_ in a _container_ deployed at runtime in a serverless cloud provider (e.g. a GitHub Action, or AWS Lambda)
 - **Function**: once deployed, each _Action_ executes a user-defined _Function_ in the contaier. A _Function_ is written in a high level language and published as a .R or .py file in a _GitHub Function repo_. A _Function_ takes *input arguments* and returns either true (successful excecution) or false (unsuccessful execution)
-- **Input/output**: a serverless _Action_ is _stateless_: the local memory and storage in a container is discarded when the _Action_ completes. Therefore, all data that must persist across invocations must be stored as _files_ in one or more S3 cloud *data servers*. FaaSr provides an *Application Programming Interface (API)* to store/retrieve files to/from S3 for this.
+- **Input/output**: a serverless _Action_ is _stateless_: the local memory and storage in a container is discarded when the _Action_ completes. Therefore, all data that must persist across invocations must be stored as _files_ in one or more S3 cloud *data store* servers. FaaSr provides an *Application Programming Interface (API)* to store/retrieve files to/from S3 for this.
 
 
 ## Workflow DAG example
@@ -28,7 +28,7 @@ The example workflow DAG above names which actions should execute, and in which 
 ![alt text](FaaSr-functions.png)
 
 - Action _computeA_ runs a function written in R, while _concurrent_ runs a function written in Python. These stored in (one or more) _GitHub function repo(s)_ and are fetched automatically by the action when it is invoked
-- Actions can read input files and write output files to (one or more) _S3 data server(s)_. the _FaaSr API_ provides functions in R and Python to put files to/get files from data server(s). The FaaSr API simplifies the programming of functions to use data from S3, without exposing you (the programmer or user) to details on how to access S3
+- Actions can read input files and write output files to (one or more) _S3 data store(s)_. the _FaaSr API_ provides functions in R and Python to put files to/get files from data server(s). The FaaSr API simplifies the programming of functions to use data from S3, without exposing you (the programmer or user) to details on how to access S3
 - In general, the bulk of the data in a workflow consists of files; function *arguments* are used for configuration (e.g. of parameters, file and folder names)
 - The typical file access pattern is as follows: 1) an action starts; 2) the action _gets_ input file(s), copying them from persistent S3 storage into its local temporary storage; 3) the action produces output file(s) in its local non-persistent storage; 4) the action _puts_ its output file(s) to persistent S3 storage; and 5) the action ends 
 

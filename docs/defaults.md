@@ -25,9 +25,10 @@ The following values are set by default in the Web UI and take effect unless ove
 
 - `False`: allow self-signed certificates
 
-## Data server configurations
+## Data store configurations
 
-- `True`: server is writable
+- 'S3': default data store name
+- `True`: by default, an S3 store is set to writable
 
 ## Secrets
 
@@ -40,7 +41,7 @@ The following values are set by default in the Web UI and take effect unless ove
 
 ## Log folder (in S3)
 
-- `FaaSrLog`
+- `FaaSrLog`: top-level log folder name; see [log] documentation for full path information
 
 ## Containers
 
@@ -60,3 +61,5 @@ Note: the latest stable release is tagged as `:latest` in all containers; specif
 - `faasr/gcp-r:latest`: GCP (in DockerHub)
 - `faasr/openwhisk-r:latest`: OpenWhisk (in DockerHub)
 - `faasr/slurm-r:latest`: Slurm (in DockerHub)
+
+[log]:logs.md

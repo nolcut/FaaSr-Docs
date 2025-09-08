@@ -8,4 +8,4 @@ Purpose of IDs:
 
 ## Custom: User-provided ID
 
-## Time-derived
+## Timestamp
