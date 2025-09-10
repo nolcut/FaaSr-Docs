@@ -16,7 +16,14 @@ The simplest way to configure this repository is to fork from the FaaSr organiza
 - While you can choose a different name for your fork, here we assume you leave the default _FaaSr-workflow_
 - Click on the green _Create fork_ button
 
-The base repository comes with an example workflow used in the [FaaSr tutorial]
+The base repository comes with an example workflow used in the [FaaSr tutorial]. 
+
+## Enabling FaaSr actions
+
+In order to use register and invoke workflows, you also need to perform a one-time configuration to enable running the pre-defined FaaSr register and invoke workflow actions. To do this:
+
+- Click on the _Actions_ tab (top of the GitHub page, next to _Code_ and _Pull requests_)
+- Click on the green button _I understand my workflows, please go ahead and enable them_
 
 ## Configuring secrets
 
@@ -35,8 +42,8 @@ Before you can register and invoke workflows, you need to create secrets storing
 - When creating a workflow with the [FaaSr Workflow Builder Web UI], you are asked to enter a name for your S3 data server(s)
 - The default compute server name for an S3 server is `S3`
 - Assume the name of a data server you are setting the secrets for is `S3`, you need two secrets, named exactly as follows (replace `S3` with the name of the server you configured)
-- `S3_ACCESS_KEY`
-- `S3_SECRET_KEY`
+- `S3_AccessKey`
+- `S3_SecretKey`
 - The secrets you store under these names are the access and secret keys you obtained from your S3 provider
 
 ### GitHub Actions

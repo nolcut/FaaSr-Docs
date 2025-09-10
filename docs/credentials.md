@@ -3,7 +3,7 @@
 
 ## S3 data server
 
-- In general, the credentials you need from your S3 account are the `ACCESS_KEY` and the `SECRET_KEY`. These are akin to user names and passwords. 
+- In general, the credentials you need from your S3 account are the `AccessKey` and the `SecretKey`. These are akin to user names and passwords. 
 - How you obtain these credentials will depend on your provider (e.g. AWS S3, MINIO, OSN - see below)
 - Paste the access key and the secret key as _Repository secrets_ in your _FaaSr-workflow_ as per the instructions in the [workflow repo] documentation
 
@@ -32,7 +32,7 @@ In summary:
 
 - You need an API key from your provider to configure for use in FaaSr
 - How you obtain this will depend on your cloud provider.
-- Paste the API key under the name `OW_API.key` as a _Repository secret_ in your _FaaSr-workflow_ as per the instructions in the [workflow repo] documentation
+- Paste the API key under the name `OW_APIkey` as a _Repository secret_ in your _FaaSr-workflow_ as per the instructions in the [workflow repo] documentation
 
 
 ## Google Cloud

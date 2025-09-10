@@ -36,7 +36,7 @@ The following values are set by default in the Web UI and take effect unless ove
 - `AWS_AccessKey`: AWS Lambda access key
 - `AWS_SecretKey`: AWS Lambda secret key
 - `GCP_SecretKey`: GCP secret key
-- `OW_API.key`: OpenWhisk API key
+- `OW_APIkey`: OpenWhisk API key
 - `SLURM_Token`: SLURM JWT token
 
 ## Log folder (in S3)
