@@ -12,6 +12,7 @@ nav:
     - 'FaaSr workflow model': 'prog_model.md'
     - 'Creating functions': 'functions.md'
     - 'Setting up FaaSr-workflow repo': 'workflow_repo.md'
+    - 'Tutorial': 'tutorial.md'
     - 'Creating and editing workflows': 'workflows.md'
     - 'Registering workflows': 'register_workflow.md'
     - 'Invoking workflows': 'invoke_workflow.md'
