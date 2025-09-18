@@ -144,10 +144,22 @@ In a workflow, suppose you have declared that a function `start` invokes a succe
 At runtime, `start` invokes 10 instances of `compute`; `faasr_rank()` determines the value of `i` for each instance of `compute`, which can be used to construct the file name:
 
 ```r
-rank_list <- FaaSr::faasr_rank()
+rank_list <- faasr_rank()
 my_rank <- rank_list$Rank
 max_rank <- rank_list$MaxRank
 local_file <- paste0("myinput_", my_rank, ".csv")
 write.csv(my_data, local_file, row.names=FALSE)
 
+```
+
+### faasr_invocation_id
+
+Usage: `faasr_invocation_id()`
+
+Returns this action's invocation ID.
+
+Example:
+
+```r
+invocation_id <- faasr_invocation_id()
 ```
