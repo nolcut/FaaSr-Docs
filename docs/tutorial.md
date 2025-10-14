@@ -25,27 +25,25 @@ Before you can register and invoke workflows, you need to create secrets storing
 - Click on the green _New repository secret_ to enter a new secret
 - Enter the proper _Name_ for each of the three secrets below (one for GitHub actions, two for Minio Play) and past the secret itself in the _Secret_ text box:
 - Click on _Add secret_ and add a secret named `GH_PAT`, pasting your GitHub PAT created in the previous step
-- Click on _Add secret_ and add a secret named `S3_ACCESSKEY`, pasting the following text: `Q3AM3UQ867SPQQA43P2F`
-- Click on _Add secret_ and add a secret named `S3_SECRETKEY`, pasting the following text: `zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG`
+- Click on _Add secret_ and add a secret named `S3_AccessKey`, pasting the following text: `Q3AM3UQ867SPQQA43P2F`
+- Click on _Add secret_ and add a secret named `S3_SecretKey`, pasting the following text: `zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG`
 
 ## Edit the tutorial JSON file
 
-The tutorial.json file comes by default in the repository you forked; however, you still need to configure it with your GitHub account name. This can be done in either of two ways:
+The tutorial.json file is available in the FaaSr-Functions repository; you will need to import it, configure it with your GitHub account name, and upload to your FaaSr-workflow repository
 
-### Option 1: Edit tutorial.json in GitHub
-
-- Edit the tutorial, json file in GitHub
-- Search for _myusername_, and replace that with your GitHub account name
-- Commit the file
-
-### Option 2: Edit tutorial.json in the Web UI
+### Step 1: Import and edit tutorial.json in the Web UI
 
 - Browse to the [FaaSr Workflow Builder Web UI]
 - Click on Upload (top left)
-- To import the tutorial file from GitHub, enter in text box: `https://github.com/FaaSr/FaaSr-workflow/blob/main/tutorial.json`
-- Click on _Edit Compute Servers_, click on _GH_, replace the UserName with your GitHub account name
-- Download tutorial.json to your computer
-- Upload tutorial.json to your repository (replacing the original file)
+- To import the tutorial file from GitHub, enter in text box: `https://github.com/FaaSr/FaaSr-Functions/blob/main/tutorial/tutorial.json`
+- Click on _Import from GitHub URL_
+- Click on _Edit Compute Servers_ (top bar), click on _GH_ (top left), then replace _YOUR_USERNAME_ with your GitHub account name
+
+### Step 2: Download to your computer and upload to FaaSr-workflow
+
+- Click on _Download_ to download tutorial.json to your computer
+- Upload tutorial.json to your FaaSr-workflow repository, using your preferred method (e.g. clicking on the _+_ button, selecting Upload file, and dragging tutorial.json)
 
 ## Register the workflow
 
@@ -54,6 +52,7 @@ The tutorial.json file comes by default in the repository you forked; however, y
 - Click on `(FAASR REGISTER)` (left)
 - Click on the `Run workflow` drop-down; enter `tutorial.json` and click on `Run workflow`
 - This will take a few seconds to complete; wait until the action completes before proceeding
+- Note: if successful, `(FAASR REGISTER)` will create two additional GitHub actions for your repository: `tutorial-start` and `tutorial-sum`. These are generated automatically for this workflow, which is named `tutorial` and has two nodes in the graph (`start` and `sum`)
 
 ## Invoke the workflow
 
@@ -61,7 +60,8 @@ The tutorial.json file comes by default in the repository you forked; however, y
 - Click on _Actions_
 - Click on `(FAASR INVOKE)` (left)
 - Click on the `Run workflow` drop-down; enter `tutorial.json` and click on `Run workflow`
-- This will take a few seconds to complete; wait until the action completes before proceeding
+- You will notice three actions will run: `(FAASR INVOKE)` is used to "kick-start" your workflow; `tutorial-start` and `tutorial-sum` are the two actions generated automatically for this workflow in the previous step
+- Wait until these actions complete before proceeding
 
 ## Check outputs
 
@@ -74,7 +74,14 @@ The workflow outputs are stored in the Minio Play S3 bucket. There are different
 
 ## Another example
 
-The tutorial.json workflow is based on two R functions (start, compute_sum). Another example is found in tutorialRpy.json that uses an R function (start) followed by a Python function (compute_sum). If you'd like to test this out, repeat the edit, register, and invoke workflow steps as above for this workflow 
+The tutorial.json workflow is based on two R functions (start, compute_sum). Another example is found in tutorialRpy.json that uses an R function (start) followed by a Python function (compute_sum). If you'd like to test this out, repeat the process of:
+
+- importing `https://github.com/FaaSr/FaaSr-Functions/blob/main/tutorial/tutorialRpy.json` into the WebUI
+- edit your username
+- download tutorialRpy.json to your computer
+- upload tutorilRpy.json to your FaaSr-workflow repo
+- `(FAASR REGISTER)` tutorialRpy.json
+- `(FAASR INVOKE)` tutorialRpy.json
 
 
 [workflow repository]: workflow_repo.md
