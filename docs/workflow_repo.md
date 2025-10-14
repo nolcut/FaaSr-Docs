@@ -14,6 +14,7 @@ The simplest way to configure this repository is to fork from the FaaSr organiza
 - Click on the down arrow next to _Fork_ for a pull-down menu; select _Create a new fork_
 - Choose your account name as the _Owner_ of the fork
 - While you can choose a different name for your fork, here we assume you leave the default _FaaSr-workflow_
+- Leave the default _Copy the main branch only_ checkbox checked
 - Click on the green _Create fork_ button
 
 The base repository comes with an example workflow used in the [FaaSr tutorial]. 
@@ -32,7 +33,7 @@ Before you can register and invoke workflows, you need to create secrets storing
 - In the _FaaSr-workflow_ repo you just forked, click on the _Settings_ tab (top of the page, to the right)
 - Scroll down; on the left pane, click on the pull-down _Secrets and variables_ and select _Actions_
 - Click on the green _New repository secret_ to enter a new secret
-- Enter the proper _Name_ for your secret (see below) and past the secret itself in the _Secret_ text box
+- Enter the proper _Name_ for your secret (see below) and paste the secret itself in the _Secret_ text box
 - Click on _Add secret_
 
 ## Naming convention for secrets
@@ -81,6 +82,10 @@ Before you can register and invoke workflows, you need to create secrets storing
 - You need one secret named: `SLURM_Token` 
 - The secret you store under this name is the JWT token you obtained from your Slurm provider
 
+## What next?
+It's recommended you start by first running the simple [FaaSr tutorial]. The secrets you will need are: *GH_PAT* (your GitHub token), *S3_AccessKey* and *S3_SecretKey* (the test Minio Play S3 bucket credentials).
+
+Once you are comfortable with the FaaSr tutorial, you may want to check additional [FaaSr function examples] as helpful workflow templates (JSON files) and functions (R and Python) for you to follow as you develop your own workflows. 
 
 [workflow model]: prog_model.md
 [register]: register_workflow.md
@@ -89,3 +94,4 @@ Before you can register and invoke workflows, you need to create secrets storing
 [cloud credentials]: credentials.md
 [FaaSr Workflow Builder Web UI]: workflows.md
 [advanced]: advanced.md
+[FaaSr function examples]: functionexamples.md
