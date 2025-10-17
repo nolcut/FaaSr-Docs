@@ -70,7 +70,7 @@ The workflow outputs are stored in the Minio Play S3 bucket. There are different
 - Browse to [minio play web UI](https://play.min.io:9443/login)
 - For user name, enter `Q3AM3UQ867SPQQA43P2F`
 - For password, enter `zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG`
-- Browse to faasr/tutorial to see the output files
+- On the search textbox (top left) enter `faasr`. Select the faasr bucket, then the tutorial folder to see the output files
 
 ## Another example
 

@@ -24,9 +24,11 @@ In summary:
 
 ## AWS Lambda
 
-- You need an access key and secret key to use Lambda in FaaSr.
-- You can download your access and secret keys from your [Amazon AWS console](https://console.aws.amazon.com/console/home).
+- You need an access key, secret key, and ARN to use Lambda in FaaSr.
+- You can access your access and secret keys, and your ARN from your [Amazon AWS console](https://console.aws.amazon.com/console/home).
 - Paste the access key and the secret key under the names `AWS_AccessKey` and `AWS_SecretKey`, respectively, as _Repository secrets_ in your _FaaSr-workflow_ as per the instructions in the [workflow repo] documentation
+- Past your ARN as `AWS_ARN` as _Repository secrets_ in your _FaaSr-workflow_
+
 
 ## OpenWHisk
 
@@ -35,9 +37,11 @@ In summary:
 - Paste the API key under the name `OW_APIkey` as a _Repository secret_ in your _FaaSr-workflow_ as per the instructions in the [workflow repo] documentation
 
 
-## Google Cloud
+## Google Cloud Platform
 
-TBD
+- You need a private secret key to use Google Cloud Platform (GCP) with FaaSr
+- You can access your key from the [Google Cloud console](https://console.cloud.google.com)
+- TBD
 
 ## Slurm
 
