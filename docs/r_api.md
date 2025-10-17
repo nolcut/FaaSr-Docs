@@ -134,8 +134,8 @@ Usage: `faasr_rank()`
 Only applicable for workflows with functions that are triggered for concurrent execution using rank.
 This returns this function's invocation rank as a list with two values:
 
-`list$MaxRank` - an integer that determines to the maximum number of invocations (e.g. N)
-`list$Rank` - an integer that determines this function's invocation rank (e.g. a number ranging from 1 to N)
+`list$max_rank` - an integer that determines to the maximum number of invocations (e.g. N)
+`list$rank` - an integer that determines this function's invocation rank (e.g. a number ranging from 1 to N)
 
 Example:
 
@@ -145,8 +145,8 @@ At runtime, `start` invokes 10 instances of `compute`; `faasr_rank()` determines
 
 ```r
 rank_list <- faasr_rank()
-my_rank <- rank_list$Rank
-max_rank <- rank_list$MaxRank
+my_rank <- rank_list$rank
+max_rank <- rank_list$max_rank
 local_file <- paste0("myinput_", my_rank, ".csv")
 write.csv(my_data, local_file, row.names=FALSE)
 
