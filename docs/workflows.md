@@ -1,6 +1,6 @@
 # Creating and Editing Workflows
 
-The [Workflow Builder Web UI](https://owicky.github.io/faasr-workflow-builder/) is used for composing and editing workflows to create FaaSr-compliant workflow JSONs. You can create one from scratch, or upload an existing FaaSr workflow JSON and edit it.
+The [Workflow Builder Web UI](https://faasr.io/FaaSr-workflow-builder/) is used for composing and editing workflows to create FaaSr-compliant workflow JSONs. You can create one from scratch, or upload an existing FaaSr workflow JSON and edit it.
 
 ## Uploading and Downloading Workflows
 
