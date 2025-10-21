@@ -56,7 +56,7 @@ It's often easier to learn by doing: read the [workflow model] introduction for 
 
 - Configure additional [cloud compute] and [data storage] accounts
 - Create your own [functions] using [FaaSr R APIs] and/or [FaaSr Python APIs]
-- Configure your own workflows using the [FaaSr Workflow Builder Web UI] that produces FaaSr-compliant JSON configurations
+- Configure your own [workflows] using the [FaaSr Workflow Builder Web UI] that produces FaaSr-compliant JSON configurations
 - [Register] your own workflows with one or more cloud providers
 - [Invoke] your workflows
 - Verify and debug your workflow [logs]
@@ -71,7 +71,8 @@ It's often easier to learn by doing: read the [workflow model] introduction for 
 [FaaSr R APIs]: r_api.md
 [FaaSr Python APIs]: py_api.md
 [workflows]: workflows.md
-[FaaSr Workflow Builder Web UI]: workflows.md
+[FaaSr Workflow Builder Web UI]: https://faasr.io/FaaSr-workflow-builder/
+[workflows]: workflows.md
 [Register]: register_workflow.md
 [Invoke]: invoke_workflow.md
 [logs]: logs.md

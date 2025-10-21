@@ -1,12 +1,16 @@
 # Creating and Editing Workflows
 
-The [Workflow Builder Web UI](https://faasr.io/FaaSr-workflow-builder/) is used for composing and editing workflows to create FaaSr-compliant workflow JSONs. You can create one from scratch, or upload an existing FaaSr workflow JSON and edit it.
+In a new browser tab or window, open the [Workflow Builder Web UI](https://faasr.io/FaaSr-workflow-builder/). This Web-based user interface is used for composing and editing workflows to create FaaSr-compliant workflow JSONs. You can create one from scratch, or upload an existing FaaSr workflow JSON and edit it.
 
 ## Uploading and Downloading Workflows
 
-To upload an existing workflow, either upload a JSON file stored locally, or enter the URL of a workflow JSON stored in Github (e.g. https://github.com/nolcut/workflow-json-test/blob/main/new-with-r.json).
+To upload an existing workflow, either upload a JSON file stored locally, or enter the URL of a workflow JSON stored in Github (e.g. https://github.com/FaaSr/FaaSr-Functions/blob/main/tutorial/tutorial.json).
 
-To download your workflow, navigate to the Download tab, and click 'Download *my-workflow*.json'. The web UI will verify that the JSON is compliant, and report any errors that need to be fixed, such as missing fields that are required.
+To download your workflow, navigate to the Download tab, and click 'Download *my-workflow*.json'. The web UI will verify that the JSON is compliant, and report any errors that need to be fixed, such as missing fields that are required. 
+
+## Download and save frequently!
+
+It is good practice to download checkpoints of your workflow as you make changes to it in order to prevent loss from a browser crash or unintentional window/tab closing. If the workflow is incomplete, the web UI will notify you of it but still allows you to download.
 
 ### Working with Layout Files
 
@@ -14,7 +18,7 @@ Layout files contain information about the position of the action nodes in the w
 
 ## Secrets
 
-The workflow builder web UI is not used to insert secrets into the workflow. Rather, secrets for your data stores and compute servers will be entered as Github Actions Secrets in your FaaSr-workflows repository. See [Configuring Secrets](https://faasr.io/FaaSr-Docs/workflow_repo/#configuring-secrets).
+The workflow builder web UI is not used to insert secrets into the workflow. Rather, secrets for your data stores and compute servers will be entered as Github Actions Secrets in your FaaSr-workflows repository. See Configuring Secrets in the [workflow repo] documentation.
 ## Data Stores
 
 Data Stores are S3 buckets (cloud storage locations), for example AWS S3 or MinIO. In order to run FaaSr workflows, you must specify at least one Data Store. To create a data store, click 'Create Data Store' and specify a name for your data store. This name will be used to reference the data store when using the FaaSr S3 APIs.
@@ -30,11 +34,11 @@ For AWS S3, you're required to specify the region of your S3 bucket. For example
 
 ## Compute Servers
 
-Each action you define in your workflow must have an associated compute server to run on. When you create a new compute server, it will get a default name based on the platform chosen. You should **not** modify this name unless you plan to use FaaSr with custom [advanced](https://faasr.io/FaaSr-Docs/advanced/) actions. You must then fill out any required fields for that platform.
+Each action you define in your workflow must have an associated compute server to run on. When you create a new compute server, it will get a default name based on the platform chosen. You should **not** modify this name unless you plan to use FaaSr with custom [advanced] actions. You must then fill out any required fields for that platform.
 
 ## Actions
 
-To create a new action in your workflow, navigate to the 'Edit Actions/Functions' tab, and enter a name for the action in the dropdown box. This action name is the unique identifier for a node in the workflow DAG. Then, [create a function](https://faasr.io/FaaSr-Docs/functions/) and link it to this action by supplying the Function Name and Function's Git Repo/Path. It's also required to specify the Function Type (i.e. language, Python and R are supported) and the Compute Server on which the action will be invoked. 
+To create a new action in your workflow, navigate to the 'Edit Actions/Functions' tab, and enter a name for the action in the dropdown box. This action name is the unique identifier for a node in the workflow DAG. Then, create a [function] and link it to this action by supplying the Function Name and Function's Git Repo/Path. It's also required to specify the Function Type (i.e. language, Python and R are supported) and the Compute Server on which the action will be invoked. 
 
 #### Adding/Removing an Action from the Layout
 
@@ -74,6 +78,12 @@ You can also change the following optional settings:
 **Log File Name**
 - Logs created in the S3 Bucket will have this name
 **InvocationID**
-- Determines the unique location for a workflow invocation's logs (see [Invocation IDs](https://faasr.io/FaaSr-Docs/invocationid/))
+- Determines the unique location for a workflow invocation's logs - see [Invocation IDs]
 **Data Store for Logs**
 - Specify a separate S3 server for logs 
+
+[workflow repo]: workflow_repo.md
+[advanced]: advanced.md
+[function]: functions.md
+[Invocation IDs]: invocationid.md
+

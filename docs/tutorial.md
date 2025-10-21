@@ -34,7 +34,7 @@ The tutorial.json file is available in the FaaSr-Functions repository; you will 
 
 ### Step 1: Import and edit tutorial.json in the Web UI
 
-- Browse to the [FaaSr Workflow Builder Web UI]
+- Open the [FaaSr Workflow Builder Web UI] in a separate browser window/tab
 - Click on Upload (top left)
 - To import the tutorial file from GitHub, enter in text box: `https://github.com/FaaSr/FaaSr-Functions/blob/main/tutorial/tutorial.json`
 - Click on _Import from GitHub URL_
@@ -86,6 +86,6 @@ The tutorial.json workflow is based on two R functions (start, compute_sum). Ano
 
 [workflow repository]: workflow_repo.md
 [credentials]: credentials.md
-[FaaSr Workflow Builder Web UI]: workflows.md
+[FaaSr Workflow Builder Web UI]: https://faasr.io/FaaSr-workflow-builder/
 [register the workflow]: register_workflow.md
 [invoke the workflow]: invoke_workflow.md
