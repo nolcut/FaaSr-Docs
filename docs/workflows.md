@@ -4,7 +4,7 @@ In a new browser tab or window, open the [Workflow Builder Web UI](https://faasr
 
 ## Uploading and Downloading Workflows
 
-To upload an existing workflow, either upload a JSON file stored locally, or enter the URL of a workflow JSON stored in Github (e.g. https://github.com/FaaSr/FaaSr-Functions/blob/main/tutorial/tutorial.json).
+To upload an existing workflow, either upload a JSON file stored locally, or enter the URL of a workflow JSON stored in Github (e.g. `https://github.com/FaaSr/FaaSr-Functions/blob/main/tutorial/tutorial.json`).
 
 To download your workflow, navigate to the Download tab, and click 'Download *my-workflow*.json'. The web UI will verify that the JSON is compliant, and report any errors that need to be fixed, such as missing fields that are required. 
 
@@ -21,16 +21,16 @@ Layout files contain information about the position of the action nodes in the w
 The workflow builder web UI is not used to insert secrets into the workflow. Rather, secrets for your data stores and compute servers will be entered as Github Actions Secrets in your FaaSr-workflows repository. See Configuring Secrets in the [workflow repo] documentation.
 ## Data Stores
 
-Data Stores are S3 buckets (cloud storage locations), for example AWS S3 or MinIO. In order to run FaaSr workflows, you must specify at least one Data Store. To create a data store, click 'Create Data Store' and specify a name for your data store. This name will be used to reference the data store when using the FaaSr S3 APIs.
+Data Stores are S3 buckets (cloud storage locations), for example AWS S3 or MinIO. In order to run FaaSr workflows, you must specify at least one Data Store. To create a data store, click `Create Data Store` and specify a name for your data store. This name will be used to reference the data store when using the FaaSr S3 APIs.
 
 **Endpoint**
-A web URL specifying the location of the S3 server. For example, https://play.min.io for MinIO's Play sandbox, or an [Amazon S3 endpoint](https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_region).
+A web URL specifying the location of the S3 server. For example, `https://play.min.io` for MinIO's Play sandbox, or an [Amazon S3 endpoint](https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_region).
 
 **Bucket**
 A unique name identifying the S3 bucket. 
 
 **Region**
-For AWS S3, you're required to specify the region of your S3 bucket. For example, 'us-east-1'.
+For AWS S3, you're required to specify the region of your S3 bucket. For example, `us-east-1`.
 
 ## Compute Servers
 
