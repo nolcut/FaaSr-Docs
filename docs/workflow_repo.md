@@ -1,6 +1,6 @@
-# Configuring your FaaSr-workflow repo
+# Your FaaSr-workflow repo
 
-As described in the [workflow model] document, before you start using FaaSr to run workflows, you need to setup your **FaaSr-workflow** GitHub repository to hold the following information:
+Your FaaSr-workflow GitHub repository is the default management/launching pad environment for all your workflows; it is the primary location where you will store credentials/secrets, and register and launch workflows. As described in the [workflow model] document, before you start using FaaSr to run workflows, you need to setup your **FaaSr-workflow** GitHub repository to hold the following information:
 
 - JSON configuration files for each of your workflows
 - GitHub secrets for your compute and data cloud servers
@@ -17,7 +17,9 @@ The simplest way to configure this repository is to fork from the FaaSr organiza
 - Leave the default _Copy the main branch only_ checkbox checked
 - Click on the green _Create fork_ button
 
-The base repository comes with an example workflow used in the [FaaSr tutorial]. 
+### Keeping your repository in sync
+
+When the [FaaSr-workflow base repository](https://github.com/FaaSr/FaaSr-workflow) is updated with new features and bug fixes, you will notice that in your own FaaSr-workflow fork there will be a message that `This branch is XX commits behind of` the upstream `FaaSr/FaaSr-workflow:main` repo. To incorporate these updates to your fork, use the `Sync fork` drop-down menu.
 
 ## Enabling FaaSr actions
 

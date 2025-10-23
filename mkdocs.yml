@@ -27,6 +27,7 @@ nav:
     - 'Creating cloud credentials': 'credentials.md'
     - 'Default values': 'defaults.md'
     - 'Advanced usage': 'advanced.md'
+    - 'Security best practices': 'security.md'
   - 'About': 'about.md'
   - 'Community': 'community.md'
   - 'Contact': 'contact.md'
