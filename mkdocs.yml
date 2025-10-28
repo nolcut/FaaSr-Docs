@@ -10,7 +10,7 @@ nav:
   - 'Tutorial': 'tutorial.md'
   - 'Documentation':
     - 'FaaSr workflow model': 'prog_model.md'
-    - 'Setting up FaaSr-workflow repo': 'workflow_repo.md'
+    - 'Setting up the FaaSr-workflow repo': 'workflow_repo.md'
     - 'Creating functions': 'functions.md'
     - 'Creating and editing workflows': 'workflows.md'
     - 'Example workflows and functions': 'functionexamples.md'
