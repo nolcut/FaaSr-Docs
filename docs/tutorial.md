@@ -1,6 +1,10 @@
 # Tutorial
 
-This document guides you through a simple tutorial that uses GitHub Actions and a free S3 data store (Minio Play). The pre-requisite for this tutorial is a GitHub account.
+This document guides you through a simple tutorial that uses GitHub Actions and a free S3 data store (Minio Play).
+
+## Prerequisites
+
+For this tutorial, all you need is a GitHub account. It is also recommended that your refer to the [Setting up the FaaSr-workflow repo](./workflow_repo.md) documentation for details about the FaaSr-workflow repository.
 
 ## Configure your FaaSr-workflow repository
 
