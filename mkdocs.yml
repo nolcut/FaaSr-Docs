@@ -30,4 +30,7 @@ nav:
   - 'About': 'about.md'
   - 'Community': 'community.md'
   - 'Contact': 'contact.md'
-  
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
