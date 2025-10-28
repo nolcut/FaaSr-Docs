@@ -1,6 +1,10 @@
 # Tutorial
 
-This document guides you through a simple tutorial that uses GitHub Actions and a free S3 data store (Minio Play). The pre-requisite for this tutorial is a GitHub account.
+This document guides you through a simple tutorial that uses GitHub Actions and a free S3 data store (Minio Play).
+
+## Prerequisites
+
+For this tutorial, all you need is a GitHub account. It is also recommended that your refer to the [Setting up the FaaSr-workflow repo](./workflow_repo.md) documentation for details about the FaaSr-workflow repository.
 
 ## Configure your FaaSr-workflow repository
 
@@ -12,13 +16,16 @@ This is a one-time step you go through to set up your [workflow repository] to h
 
 ## Configure your GitHub PAT
 
-You need a personal access token in your repository secrets to run this tutorial. 
+You need a personal access token in your repository secrets to run this tutorial.
 
-Follow the steps outlined in the [credentials] documentation to obtain your PAT. Copy this PAT so you can paste it as a secret in the next step
+Follow the steps outlined in the [GitHub Actions credentials] documentation to obtain your PAT. Copy this PAT so you can paste it as a secret in the next step
 
 ## Configure your repository secrets
 
-Before you can register and invoke workflows, you need to create secrets storing credentials for the cloud providers you will use. The following assumes that you already have obtained [cloud credentials] for those.
+Before you can register and invoke workflows, you need to create secrets storing credentials for the cloud providers you will use.
+
+!!! note "Guest S3 Credentials"
+    Note that for this tutorial we are using guest credentials for a free S3 data store offered by MinIO. In practice, you will use your own credentials (see the [credentials](./credentials.md) documentation for more information).
 
 - In the _FaaSr-workflow_ repo you just forked, click on the _Settings_ tab (top of the page, to the right)
 - Scroll down; on the left pane, click on the pull-down _Secrets and variables_ and select _Actions_
@@ -56,7 +63,13 @@ The tutorial.json file is available in the FaaSr-Functions repository; you will 
 
 ## Invoke the workflow
 
-- After register, you can [invoke the workflow] 
+!!! question "What code am I running?"
+    For this tutorial, function code is sourced from the [FaaSr-Functions](https://github.com/FaaSr/FaaSr-Functions) repository. See [Creating Functions](./functions.md) for more information on how FaaSr runs function code.
+
+!!! warning
+    Run only [workflows and code that you trust](./security.md#only-reuse-workflowsfunctions-that-you-trust) with FaaSr. Always check that you trust the provenance of the workflow or code that you are running.
+
+- After register, you can [invoke the workflow]
 - Click on _Actions_
 - Click on `(FAASR INVOKE)` (left)
 - Click on the `Run workflow` drop-down; enter `tutorial.json` and click on `Run workflow`
@@ -83,9 +96,8 @@ The tutorial.json workflow is based on two R functions (start, compute_sum). Ano
 - `(FAASR REGISTER)` tutorialRpy.json
 - `(FAASR INVOKE)` tutorialRpy.json
 
-
 [workflow repository]: workflow_repo.md
-[credentials]: credentials.md
+[GitHub Actions credentials]: credentials.md#github-actions
 [FaaSr Workflow Builder Web UI]: https://faasr.io/FaaSr-workflow-builder/
 [register the workflow]: register_workflow.md
 [invoke the workflow]: invoke_workflow.md

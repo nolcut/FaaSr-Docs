@@ -10,8 +10,7 @@ nav:
   - 'Tutorial': 'tutorial.md'
   - 'Documentation':
     - 'FaaSr workflow model': 'prog_model.md'
-    - 'Tutorial': 'tutorial.md'
-    - 'Setting up FaaSr-workflow repo': 'workflow_repo.md'
+    - 'Setting up the FaaSr-workflow repo': 'workflow_repo.md'
     - 'Creating functions': 'functions.md'
     - 'Creating and editing workflows': 'workflows.md'
     - 'Example workflows and functions': 'functionexamples.md'
@@ -31,4 +30,7 @@ nav:
   - 'About': 'about.md'
   - 'Community': 'community.md'
   - 'Contact': 'contact.md'
-  
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
