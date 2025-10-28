@@ -18,7 +18,7 @@ This is a one-time step you go through to set up your [workflow repository] to h
 
 You need a personal access token in your repository secrets to run this tutorial.
 
-Follow the steps outlined in the [credentials] documentation to obtain your PAT. Copy this PAT so you can paste it as a secret in the next step
+Follow the steps outlined in the GitHub Actions section of the [credentials] documentation to obtain your PAT. Copy this PAT so you can paste it as a secret in the next step
 
 ## Configure your repository secrets
 
@@ -88,7 +88,7 @@ The tutorial.json workflow is based on two R functions (start, compute_sum). Ano
 - `(FAASR INVOKE)` tutorialRpy.json
 
 [workflow repository]: workflow_repo.md
-[credentials]: credentials.md
+[credentials]: credentials.md#github-actions
 [FaaSr Workflow Builder Web UI]: https://faasr.io/FaaSr-workflow-builder/
 [register the workflow]: register_workflow.md
 [invoke the workflow]: invoke_workflow.md
