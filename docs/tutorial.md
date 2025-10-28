@@ -18,11 +18,15 @@ This is a one-time step you go through to set up your [workflow repository] to h
 
 You need a personal access token in your repository secrets to run this tutorial.
 
-Follow the steps outlined in the GitHub Actions section of the [credentials] documentation to obtain your PAT. Copy this PAT so you can paste it as a secret in the next step
+Follow the steps outlined in the [GitHub Actions credentials] documentation to obtain your PAT. Copy this PAT so you can paste it as a secret in the next step
 
 ## Configure your repository secrets
 
-Before you can register and invoke workflows, you need to create secrets storing credentials for the cloud providers you will use. The following assumes that you already have obtained [cloud credentials] for those.
+Before you can register and invoke workflows, you need to create secrets storing credentials for the cloud providers you will use.
+
+!!! note "Guest S3 Credentials"
+
+    Note that for this tutorial we are using guest credentials for a free S3 data store offered by MinIO. In practice, you will use your own credentials (see the [credentials](./credentials.md) documentation for more information).
 
 - In the _FaaSr-workflow_ repo you just forked, click on the _Settings_ tab (top of the page, to the right)
 - Scroll down; on the left pane, click on the pull-down _Secrets and variables_ and select _Actions_
@@ -88,7 +92,7 @@ The tutorial.json workflow is based on two R functions (start, compute_sum). Ano
 - `(FAASR INVOKE)` tutorialRpy.json
 
 [workflow repository]: workflow_repo.md
-[credentials]: credentials.md#github-actions
+[GitHub Actions credentials]: credentials.md#github-actions
 [FaaSr Workflow Builder Web UI]: https://faasr.io/FaaSr-workflow-builder/
 [register the workflow]: register_workflow.md
 [invoke the workflow]: invoke_workflow.md
