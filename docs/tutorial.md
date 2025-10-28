@@ -25,7 +25,6 @@ Follow the steps outlined in the [GitHub Actions credentials] documentation to o
 Before you can register and invoke workflows, you need to create secrets storing credentials for the cloud providers you will use.
 
 !!! note "Guest S3 Credentials"
-
     Note that for this tutorial we are using guest credentials for a free S3 data store offered by MinIO. In practice, you will use your own credentials (see the [credentials](./credentials.md) documentation for more information).
 
 - In the _FaaSr-workflow_ repo you just forked, click on the _Settings_ tab (top of the page, to the right)
@@ -63,6 +62,12 @@ The tutorial.json file is available in the FaaSr-Functions repository; you will 
 - Note: if successful, `(FAASR REGISTER)` will create two additional GitHub actions for your repository: `tutorial-start` and `tutorial-sum`. These are generated automatically for this workflow, which is named `tutorial` and has two nodes in the graph (`start` and `sum`)
 
 ## Invoke the workflow
+
+!!! question "What code am I running?"
+    For this tutorial, function code is sourced from the [FaaSr-Functions](https://github.com/FaaSr/FaaSr-Functions) repository. See [Creating Functions](./functions.md) for more information on how FaaSr runs function code.
+
+!!! warning
+    Run only [workflows and code that you trust](./security.md#only-reuse-workflowsfunctions-that-you-trust) with FaaSr. Always check that you trust the provenance of the workflow or code that you are running.
 
 - After register, you can [invoke the workflow]
 - Click on _Actions_
