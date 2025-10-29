@@ -2,13 +2,12 @@
 
 ![alt text](assets/faasr_logo.jpg)
 
-FaaSr is serverless Function-as-a-Service cloud software that makes it easy for 
-developers to create functions and compose them in workflow graphs that can run 
+FaaSr is serverless Function-as-a-Service cloud software that makes it easy for
+developers to create functions and compose them in workflow graphs that can run
 unattended and on-demand
 
-FaaSr simplifies deploying reproducible FaaS workflows in different cloud providers 
+FaaSr simplifies deploying reproducible FaaS workflows in different cloud providers
 without any code changes, with a primary use case in scientific workflows
-
 
 ## Cloud platforms
 
@@ -50,9 +49,9 @@ To get started with FaaSr you need:
 - A workflow configuration JSON file stored in your account's FaaSr-workflow repository
 - A function code repository
 
-## Getting started 
+## Getting started
 
-It's often easier to learn by doing: read the [workflow model] introduction for a brief overview of how FaaSr workflows are composed, and then the [FaaSr tutorial] guides you through setting up your ]workflow repo] using a freely available public S3 test bucket hosted by __[Minio Play]__. Once you are comfortable with the initial setup from the tutorial, you will be able to:
+It's often easier to learn by doing: read the [workflow model] introduction for a brief overview of how FaaSr workflows are composed, and then the [FaaSr tutorial] guides you through setting up your [workflow repo] using a freely available public S3 test bucket hosted by __[Minio Play]__. Once you are comfortable with the initial setup from the tutorial, you will be able to:
 
 - Configure additional [cloud compute] and [data storage] accounts
 - Create your own [functions] using [FaaSr R APIs] and/or [FaaSr Python APIs]
@@ -72,7 +71,6 @@ It's often easier to learn by doing: read the [workflow model] introduction for 
 [FaaSr Python APIs]: py_api.md
 [workflows]: workflows.md
 [FaaSr Workflow Builder Web UI]: https://faasr.io/FaaSr-workflow-builder/
-[workflows]: workflows.md
 [Register]: register_workflow.md
 [Invoke]: invoke_workflow.md
 [logs]: logs.md
